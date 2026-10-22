@@ -1,0 +1,19 @@
+# Python 3.12 was used for the tests. A plain "pip install torch" gives the processor build on Windows;
+# for an NVIDIA card install the CUDA build from https://pytorch.org/get-started/locally/ first.
+numpy
+scipy
+scikit-image
+scikit-learn
+opencv-python-headless
+Pillow
+torch
+torchvision
+transformers
+huggingface_hub
+lpips
+trimesh
+# the optional normals step of photo-to-3d only
+diffusers
+psutil
+# tests only
+pytest

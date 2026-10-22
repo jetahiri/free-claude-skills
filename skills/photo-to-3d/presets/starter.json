@@ -1,0 +1,51 @@
+{
+ "preset": "starter",
+ "about": "Copy this file next to your depth maps, set image.width and image.height to the photo's size (depth_from_ref.py prints it), and point image.image, image.depth and image.mask at your files. Set geometry.grid to half the photo size. What each setting changes is in docs/SETTINGS.md.",
+ "image": {
+  "image": "depth/reference.jpg",
+  "depth": "depth/depth.npy",
+  "mask": "depth/mask.npy",
+  "width": 1080,
+  "height": 1920
+ },
+ "geometry": {
+  "grid": [540, 960],
+  "smooth": 6.0,
+  "near": 5.0,
+  "thickness": 1.5,
+  "overscan": 1.04,
+  "gap_depth": 0.0,
+  "gap_percentile": 30,
+  "gap_soften": 3.0,
+  "curl": 0.35,
+  "curl_width": 0.25,
+  "subdivision": 1
+ },
+ "material": {
+  "base": "#cfc6b8",
+  "roughness": 0.6,
+  "specular": 0.3,
+  "subsurface_radius": [1.0, 0.6, 0.4],
+  "subsurface_scale": 0.6,
+  "sheen": 0.2,
+  "grain_strength": 0.15,
+  "grain_scale": 300.0
+ },
+ "lights": [
+  {"name": "Key", "at": [-2.6, 2.6, 2.4], "aim": [0.0, 6.0, 0.2], "size": 3.0, "power": 650, "color": "#fff8f0"},
+  {"name": "Glow", "warm": true, "at": [0.9, 9.0, -1.7], "aim": [0.4, 6.0, -1.0], "size": 2.5, "power": 2600, "color": "#ff9a50"},
+  {"name": "GlowUnder", "warm": true, "at": [1.1, 4.6, -2.6], "aim": [0.5, 6.0, -1.1], "size": 1.8, "power": 250, "color": "#ffb070"}
+ ],
+ "world": {"color": "#26323a", "strength": 0.4},
+ "backdrop": {
+  "distance": 16,
+  "low": "#1b252c",
+  "high": "#2e3d47",
+  "bloom": "#e6b98a",
+  "bloom_at": [0.82, 0.2],
+  "bloom_radius": 0.3
+ },
+ "camera": {"lens": 50, "fstop": 1.0, "focus_at": [0.5, 0.5]},
+ "motion": {"loop_frames": 240, "drift": 0.18, "drift2": 0.08, "sway": 0.05},
+ "render": {"samples": 256, "scale": 1.0, "look": "AgX - Medium High Contrast"}
+}

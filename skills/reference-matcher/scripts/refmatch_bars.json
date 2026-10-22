@@ -1,0 +1,78 @@
+{
+  "_about": "Pass bars and weights per job kind for refmatch.py. Changed by the verdict command when your eye and the score disagree (your eye wins); every change is logged in the refmatch_calibration table of refmatch_records.sqlite, with date and reason. Starting values come from a set of 3D background recreations judged by hand.",
+  "kinds": {
+    "3d-background": {
+      "weights": {
+        "silhouette": 0.2,
+        "edges": 0.1,
+        "structure": 0.2,
+        "colour": 0.2,
+        "perceptual": 0.2,
+        "depth": 0.1,
+        "clarity": 0.15
+      },
+      "min": {
+        "silhouette": 0.85,
+        "structure": 0.55,
+        "colour": 0.8,
+        "perceptual": 0.7,
+        "clarity": 0.7
+      },
+      "combined_min": 75
+    },
+    "3d-clay": {
+      "_about": "the grey shape check before materials (a plain grey 3D render): shape only, colour and perceptual ignored",
+      "weights": {
+        "silhouette": 0.35,
+        "edges": 0.15,
+        "structure": 0.25,
+        "colour": 0.0,
+        "perceptual": 0.0,
+        "depth": 0.25,
+        "clarity": 0.0
+      },
+      "min": {
+        "silhouette": 0.787,
+        "structure": 0.55
+      },
+      "combined_min": 70
+    },
+    "web-page": {
+      "weights": {
+        "silhouette": 0.05,
+        "edges": 0.25,
+        "structure": 0.25,
+        "colour": 0.25,
+        "perceptual": 0.2,
+        "depth": 0.0,
+        "clarity": 0.1
+      },
+      "min": {
+        "structure": 0.6,
+        "colour": 0.8,
+        "perceptual": 0.7,
+        "clarity": 0.7
+      },
+      "combined_min": 75
+    },
+    "video-frame": {
+      "weights": {
+        "silhouette": 0.15,
+        "edges": 0.1,
+        "structure": 0.2,
+        "colour": 0.25,
+        "perceptual": 0.2,
+        "depth": 0.1,
+        "clarity": 0.15
+      },
+      "min": {
+        "silhouette": 0.8,
+        "structure": 0.5,
+        "colour": 0.8,
+        "perceptual": 0.7,
+        "clarity": 0.7
+      },
+      "combined_min": 72
+    }
+  }
+}
